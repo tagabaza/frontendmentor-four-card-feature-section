@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color: hsl(0, 0%, 98%);
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+section{
+  text-align: center;
+}
+
+h1{
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+}
+
+h2{
+  color: hsl(234, 12%, 34%);
+}
+
+p{
+  color: hsl(229, 6%, 66%);
+
+}
+
+img{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+.container{
+  margin: 0 auto;
+  width: 80%;
+  min-width: 300px;
+  max-width: 1055px;
+
+}
+
+.intro{
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.intro h2{
+  padding-bottom: 20px;
+}
+
+.intro p{
+  font-size: 0.9rem;
+}
+
+.card{
+  background-color: white;
+  border-radius: 0.3rem;
+  box-shadow: 0px 8px 15px hsl(229, 6%, 66%);
+  height: 200px;
+  padding: 20px 20px 5px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+  z-index: 2;
+}
+
+.supervisor{
+  grid-area: supervisor;
+  border-top: 5px solid hsl(180, 62%, 55%);
+
+}
+
+.teambuilder{
+  grid-area: teambuilder;
+  border-top: 5px solid hsl(0, 78%, 62%);
+  top: 60%;
+}
+
+.karma{
+  grid-area: karma;
+  border-top: 5px solid hsl(34, 97%, 64%);
+  bottom: 60%;
+}
+
+.calculator{
+  grid-area: calculator;
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+
+@media screen and (min-width: 825px) {
+
+  .intro p{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .cards{
+      display: grid;
+      margin-top: -200px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 15px 30px;
+      grid-template-areas:
+      ". teambuilder ."
+      "supervisor . calculator"
+      ". karma .";
+  }
+
+}
